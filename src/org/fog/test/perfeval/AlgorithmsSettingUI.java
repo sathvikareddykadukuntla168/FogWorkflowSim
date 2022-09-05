@@ -143,6 +143,7 @@ public class AlgorithmsSettingUI extends JFrame {
 		lblFcfs.setFont(new Font("Consolas", Font.PLAIN, 16));
 		lblFcfs.setBounds(28, 128, 95, 15);
 		AlgorithmsPanel.add(lblFcfs);
+
 		
 		JLabel lblRoundrobin = new JLabel("RoundRobin");
 		lblRoundrobin.setFont(new Font("Consolas", Font.PLAIN, 16));
@@ -163,6 +164,11 @@ public class AlgorithmsSettingUI extends JFrame {
 		lblGa_1.setForeground(Color.blue);
 		AlgorithmsPanel.add(lblGa_1);
 		lblGa_1.addMouseListener(new MouseListener1(){});
+		
+		JLabel lblLifo = new JLabel("LIFO");
+		lblLifo.setFont(new Font("Consolas", Font.PLAIN, 16));
+		lblLifo.setBounds(28, 277, 95, 15);
+		AlgorithmsPanel.add(lblLifo);
 		
 		JLabel lblAlgorithms = new JLabel("Algorithms");
 		lblAlgorithms.setFont(new Font("Consolas", Font.BOLD, 16));

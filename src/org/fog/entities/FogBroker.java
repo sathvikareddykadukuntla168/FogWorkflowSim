@@ -22,6 +22,7 @@ import org.workflowsim.failure.FailureGenerator;
 import org.workflowsim.scheduling.BaseSchedulingAlgorithm;
 import org.workflowsim.scheduling.DataAwareSchedulingAlgorithm;
 import org.workflowsim.scheduling.FCFSSchedulingAlgorithm;
+import org.workflowsim.scheduling.LIFOSchedulingAlgorithm;
 import org.workflowsim.scheduling.GASchedulingAlgorithm;
 import org.workflowsim.scheduling.MCTSchedulingAlgorithm;
 import org.workflowsim.scheduling.MaxMinSchedulingAlgorithm;
@@ -149,6 +150,7 @@ public class FogBroker extends PowerDatacenterBroker{
 				case MINMIN:
 				case MAXMIN:
 				case FCFS:
+                case LIFO:
 				case MCT:
 				case STATIC:
 				case DATA:
@@ -199,6 +201,9 @@ public class FogBroker extends PowerDatacenterBroker{
             //by default it is Static
             case FCFS:
                 algorithm = new FCFSSchedulingAlgorithm();
+                break;
+            case LIFO:
+                algorithm = new LIFOSchedulingAlgorithm();
                 break;
             case MINMIN:
                 algorithm = new MinMinSchedulingAlgorithm();
